@@ -34,7 +34,7 @@ const Login = () => {
             <div className="Login-container">
                 <h3>Login With</h3>
                 <button className="Login-google" onClick={handleGoogleLogin}>
-                    <h5 className="mt-2"><i className="fab fa-google"></i> Continue with Google</h5>
+                    <h5 className=" text-bright-red"><i className="fab fa-google"></i> Continue with Google</h5>
                 </button>
                 <p>Don’t have an account? <span className="text-primary">Create an account</span></p>
                 <p>{error}</p>

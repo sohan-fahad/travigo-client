@@ -5,8 +5,12 @@ import Home from './components/Home/Home/Home';
 import Header from './components/Shared/Header/Header';
 import Login from './components/Login/Login';
 import AuthProvider from './context/AuthProvider';
-import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import AddNewService from './components/Admin/AddNewService/AddNewService';
+import Footer from './components/Shared/Footer/Footer';
+import PlaceBooking from './components/PlaceBooking/PlaceBooking';
+import ManageService from './components/ManageService/ManageService';
+import MyBooking from './components/MyBooking/MyBooking';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,16 +25,23 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/addservice">
+            <PrivateRoute path="/addservice">
               <AddNewService></AddNewService>
+            </PrivateRoute>
+            <PrivateRoute path="/placebooking/:id">
+              <PlaceBooking></PlaceBooking>
+            </PrivateRoute>
+            <Route path="/manage">
+              <ManageService></ManageService>
             </Route>
-            <Route path="/placeorder">
-              <PlaceOrder></PlaceOrder>
+            <Route path="/mybooking">
+              <MyBooking></MyBooking>
             </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

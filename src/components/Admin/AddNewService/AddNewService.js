@@ -10,7 +10,7 @@ const AddNewService = () => {
     const imgLinkRef = useRef()
     const priceRef = useRef()
 
-    const handleEventAdd = (e) => {
+    const handleEventAdd = e => {
         e.preventDefault()
         const name = nameRef.current.value
         const description = descriptionRef.current.value

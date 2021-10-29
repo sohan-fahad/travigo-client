@@ -1,0 +1,37 @@
+.service-container {
+ height: auto;
+ background-color: #fff;
+ border-radius: 5px;
+}
+.service-img {
+    height: auto;
+}
+
+.service-img img {
+    width: 100%;
+}
+.service-container h4 {
+    font-weight: 600;
+}
+
+/* .service-title {
+    font-size: 26px;
+    font-weight: 500;
+} */
+
+.service-price {
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn-book {
+    width: 100%;
+    border: none;
+    background-color: #FF5DA2;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
