@@ -1,0 +1,15 @@
+.navBar {
+    background-color:#142020;
+}
+.navBar .logo {
+    width: 70px;
+}
+.navBar  a {
+    color: #ffff;
+    padding: 10px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.navBar  a:hover {
+    color: #10a140;
+}
