@@ -36,7 +36,7 @@ const PlaceOrder = () => {
         const phone = phoneRef.current.value
         const destinetion = desitinetionRef.current.value
 
-        const bookingData = { name, email, destinetion, phone, bookingDate, price, status: "Painding" }
+        const bookingData = { name, email, destinetion, phone, bookingDate, price, status: "Pending" }
         e.preventDefault()
         axios.post("http://localhost:5000/booking", bookingData)
             .then(res => {

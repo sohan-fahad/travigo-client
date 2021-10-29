@@ -11,6 +11,7 @@ import PlaceBooking from './components/PlaceBooking/PlaceBooking';
 import ManageService from './components/ManageService/ManageService';
 import MyBooking from './components/MyBooking/MyBooking';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound'
 
 function App() {
   return (
@@ -31,14 +32,17 @@ function App() {
             <PrivateRoute path="/placebooking/:id">
               <PlaceBooking></PlaceBooking>
             </PrivateRoute>
-            <Route path="/manage">
+            <PrivateRoute path="/manage">
               <ManageService></ManageService>
-            </Route>
-            <Route path="/mybooking">
+            </PrivateRoute>
+            <PrivateRoute path="/mybooking">
               <MyBooking></MyBooking>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import './ManageService.css'
 
 const Manage = () => {
     const [bookings, setBookings] = useState([])
@@ -27,41 +28,43 @@ const Manage = () => {
         bookings.status = "APPROVED"
         console.log(bookings.status)
         axios.put(`http://localhost:5000/booking/${id}`, bookings.status)
-        .then(res => {
-            if(res) {
-                alert("APPROVED")
-                setControl(!control)
-            }
-        })
+            .then(res => {
+                if (res) {
+                    alert("APPROVED")
+                    setControl(!control)
+                }
+            })
     }
     return (
         <Container>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Booking Date</th>
-                        <th>Email</th>
-                        <th>Destination</th>
-                        <th>Approve</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                {bookings.map(booking =>
-                    <tbody key={booking?._id}>
+            <div className="Manage-Service">
+                <Table striped bordered hover>
+                    <thead>
                         <tr>
-                            <td>{booking?.name}</td>
-                            <td>{booking?.bookingDate}</td>
-                            <td>{booking?.email}</td>
-                            <td>{booking?.destinetion}</td>
-                            <td><button onClick={()=> handlePainding(booking?._id)} className="btn-primary">{booking.status === "Painding" ? "PAINDING" : "APPROVED"}</button></td>
-                            <td><button className='btn-danger px-2 py-1'
-                                onClick={() => handleManageDelete(booking._id)}
-                            >X</button></td>
+                            <th>Name</th>
+                            <th>Booking Date</th>
+                            <th>Email</th>
+                            <th>Destination</th>
+                            <th>Approve</th>
+                            <th>Delete</th>
                         </tr>
-                    </tbody>
-                )}
-            </Table>
+                    </thead>
+                    {bookings.map(booking =>
+                        <tbody key={booking?._id}>
+                            <tr>
+                                <td>{booking?.name}</td>
+                                <td>{booking?.bookingDate}</td>
+                                <td>{booking?.email}</td>
+                                <td>{booking?.destinetion}</td>
+                                <td><button onClick={() => handlePainding(booking?._id)} className="btn-primary">{booking.status === "Pending" ? "PENDING" : "APPROVED"}</button></td>
+                                <td><button className='btn-danger px-2 py-1'
+                                    onClick={() => handleManageDelete(booking._id)}
+                                >X</button></td>
+                            </tr>
+                        </tbody>
+                    )}
+                </Table>
+            </div>
         </Container>
     );
 };

@@ -1,0 +1,32 @@
+.NotFound {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    overflow: hidden;
+}
+
+.btn-notFound{
+    background-color: #ffff;
+    border: 1px solid #dd0148;
+    color: #dd0148;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.2s ease-in;
+}
+.btn-notFound:hover {
+    background-color: #dd0148;
+    color: #ffff;
+}
