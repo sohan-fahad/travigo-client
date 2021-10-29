@@ -30,7 +30,7 @@ const MyBooking = () => {
             })
     }
     return (
-        <div>
+        <div id="mybooking">
             <Container>
                 <div className="my-Booking">
                     <Table striped bordered hover>
