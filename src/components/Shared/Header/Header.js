@@ -23,7 +23,7 @@ const Header = () => {
                     <Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link>
                     {
                         user?.email &&
-                        <Dropdown className="mx-3">
+                        <Dropdown className="mx-3 my-3">
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
                                 USER PANEL
                             </Dropdown.Toggle>
