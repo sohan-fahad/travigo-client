@@ -18,7 +18,7 @@ const AddNewService = () => {
         const price = priceRef.current.value
 
         const enventInfo = { name, description, tourImage, price }
-        axios.post('http://localhost:5000/services', enventInfo)
+        axios.post('https://morning-reaches-74730.herokuapp.com/services', enventInfo)
             .then(res => {
                 if (res) {
                     alert("Successful")

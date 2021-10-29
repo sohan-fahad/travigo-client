@@ -17,8 +17,9 @@ const PlaceOrder = () => {
     const priceRef = useRef()
     const phoneRef = useRef()
     const desitinetionRef = useRef()
+    const addressRef = useRef()
 
-    const url = `http://localhost:5000/services/` + id
+    const url = `https://morning-reaches-74730.herokuapp.com/services/`+ id
     const [service, setService] = useState({})
 
     useEffect(() => {
@@ -35,10 +36,11 @@ const PlaceOrder = () => {
         const price = priceRef.current.value
         const phone = phoneRef.current.value
         const destinetion = desitinetionRef.current.value
+        const address = addressRef.current.value
 
-        const bookingData = { name, email, destinetion, phone, bookingDate, price, status: "Pending" }
+        const bookingData = { name, email, destinetion, phone, bookingDate, price, status: "Pending", address }
         e.preventDefault()
-        axios.post("http://localhost:5000/booking", bookingData)
+        axios.post("https://morning-reaches-74730.herokuapp.com/booking", bookingData)
             .then(res => {
                 if(res) {
                     alert("Booking Succesfull")
@@ -65,6 +67,7 @@ const PlaceOrder = () => {
                             <input type="email" value={user?.email} ref={emailRef} />
                             <input type="text" placeholder="Name" ref={nameRef} />
                             <input type="text" value={service?.name} ref={desitinetionRef} />
+                            <input type="text" ref={addressRef} placeholder="Address" />
                             <input type="text" placeholder="Phone Number" ref={phoneRef} required />
                             <input type="date" ref={dateRef} required />
                             <input type="number" value={service?.price} ref={priceRef} />

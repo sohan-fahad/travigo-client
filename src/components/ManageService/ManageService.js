@@ -7,12 +7,12 @@ const Manage = () => {
     const [bookings, setBookings] = useState([])
     const [control, setControl] = useState(false)
     useEffect(() => {
-        axios.get("http://localhost:5000/booking")
+        axios.get("https://morning-reaches-74730.herokuapp.com/booking")
             .then(res => setBookings(res.data))
     }, [control])
 
     const handleManageDelete = id => {
-        const url = `http://localhost:5000/booking/${id}`
+        const url = `https://morning-reaches-74730.herokuapp.com/booking/${id}`
         axios.delete(url)
             .then(res => {
                 if (res) {
@@ -27,7 +27,7 @@ const Manage = () => {
     const handlePainding = id => {
         bookings.status = "APPROVED"
         console.log(bookings.status)
-        axios.put(`http://localhost:5000/booking/${id}`, bookings.status)
+        axios.put(`https://morning-reaches-74730.herokuapp.com/booking/${id}`, bookings.status)
             .then(res => {
                 if (res) {
                     alert("APPROVED")

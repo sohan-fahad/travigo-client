@@ -5,7 +5,6 @@ import './Service.css'
 
 const Service = ({ service }) => {
     const { name, description, tourImage, price, _id } = service;
-    console.log(_id)
     return (
         <div className="service-container">
             <div className="service-img">

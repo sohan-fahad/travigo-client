@@ -10,14 +10,14 @@ const MyBooking = () => {
     const [control, setControl] = useState(false)
 
     useEffect(() => {
-        const url = `http://localhost:5000/booking/${user.email}`
+        const url = `https://morning-reaches-74730.herokuapp.com/booking/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMyBooking(data))
     }, [control])
 
     const handleMyBooking = id => {
-        const url = `http://localhost:5000/booking/${id}`
+        const url = `https://morning-reaches-74730.herokuapp.com/booking/${id}`
         axios.delete(url)
             .then(res => {
                 if (res) {

@@ -7,7 +7,7 @@ import './Services.css'
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/services')
+        axios.get('https://morning-reaches-74730.herokuapp.com/services')
             .then(res => {
                 setServices(res.data)
             })
