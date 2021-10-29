@@ -20,7 +20,9 @@ const MyBooking = () => {
         const url = `https://morning-reaches-74730.herokuapp.com/booking/${id}`
         axios.delete(url)
             .then(res => {
-                if (res) {
+                 const data = res.data
+                if (data.deletedCount > 0) {
+                    console.log(data.deletedCount)
                     const process = window.confirm("Are You Sure?")
                     if (process) {
                         alert("Delete succussfully");
