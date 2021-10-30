@@ -4,7 +4,7 @@
  border-radius: 5px;
  display: flex;
  flex-direction: column;
- justify-content: space-evenly;
+ justify-content: space-between;
 }
 .service-img {
     height: auto;
