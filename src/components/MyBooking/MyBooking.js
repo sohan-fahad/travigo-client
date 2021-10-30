@@ -22,7 +22,6 @@ const MyBooking = () => {
             .then(res => {
                  const data = res.data
                 if (data.deletedCount > 0) {
-                    console.log(data.deletedCount)
                     const process = window.confirm("Are You Sure?")
                     if (process) {
                         alert("Delete succussfully");
@@ -42,7 +41,7 @@ const MyBooking = () => {
                                 <th>Booking Date</th>
                                 <th>Email</th>
                                 <th>Destination</th>
-                                <th>Approve</th>
+                                <th>Status</th>
                                 <th>Cancel</th>
                             </tr>
                         </thead>
@@ -53,9 +52,9 @@ const MyBooking = () => {
                                     <td>{booking?.bookingDate}</td>
                                     <td>{booking?.email}</td>
                                     <td>{booking?.destinetion}</td>
-                                    <td><button className="btn-primary">{
+                                    <td className="fw-bold">{
                                         booking.status === "Pending" ? "PENDING" : "APPROVED"
-                                    }</button></td>
+                                    }</td>
                                     <td><button className='btn-danger px-2 py-1'
                                         onClick={() => handleMyBooking(booking._id)}
                                     >X</button></td>

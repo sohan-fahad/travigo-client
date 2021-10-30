@@ -8,7 +8,6 @@ const Login = () => {
     const history = useHistory()
     const location = useLocation()
     const redirect_from = location.state?.from || "/home"
-    console.log(redirect_from)
 
     const { singingUsingGoole, setError, error, setUser, setIsLoading } = useAuth()
 

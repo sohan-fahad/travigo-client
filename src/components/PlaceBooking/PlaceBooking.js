@@ -24,7 +24,9 @@ const PlaceOrder = () => {
 
     useEffect(() => {
         axios.get(url)
-            .then(res => setService(res.data))
+            .then(res => {
+                setService(res.data)
+            })
 
     }, [])
 
@@ -44,7 +46,7 @@ const PlaceOrder = () => {
             .then(res => {
                 if(res) {
                     alert("Booking Succesfull")
-                    history.push("/")
+                    history.push("/home")
                 }
             })
     }
