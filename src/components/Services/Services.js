@@ -6,13 +6,13 @@ import './Services.css'
 import useAuth from '../Hooks/useAuth'
 
 const Services = () => {
-    const { setControl, control } = useAuth()
+    const { preLoader, setPreLoader } = useAuth()
     const [services, setServices] = useState([])
     useEffect(() => {
         axios.get('https://morning-reaches-74730.herokuapp.com/services')
             .then(res => {
                 setServices(res.data)
-                setControl(false)
+                setPreLoader(false)
             })
     }, [])
 
@@ -24,7 +24,7 @@ const Services = () => {
                 <div className="services-container">
                     <div className="services">
                         {
-                            control ? <Spinner animation="border" /> :
+                            preLoader ? <Spinner animation="border" /> :
                                 services.map(service => <Service
                                     key={service._id}
                                     service={service}

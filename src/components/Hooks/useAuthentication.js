@@ -12,7 +12,7 @@ const useAuthentication = () => {
 
     const [user, setUser] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const [control, setControl] = useState(true)
+    const [preLoader, setPreLoader] = useState(true)
     const [error, setError] = useState("")
     // google singing
     const singingUsingGoole = () => {
@@ -42,8 +42,8 @@ const useAuthentication = () => {
         setError,
         user,
         setUser,
-        setControl,
-        control
+        preLoader,
+        setPreLoader
     }
 };
 
