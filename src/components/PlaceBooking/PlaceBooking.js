@@ -65,7 +65,7 @@ const PlaceOrder = () => {
                     <div className="booking-form">
                         <form onSubmit={hadleBooking}>
                             <input type="email" value={user?.email} ref={emailRef} />
-                            <input type="text" placeholder="Name" ref={nameRef} />
+                            <input type="text" placeholder="Name" defaultValue={user?.displayName} ref={nameRef} />
                             <input type="text" value={service?.name} ref={desitinetionRef} />
                             <input type="text" ref={addressRef} placeholder="Address" />
                             <input type="text" placeholder="Phone Number" ref={phoneRef} required />

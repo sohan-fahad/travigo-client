@@ -2,6 +2,9 @@
  height: auto;
  background-color: #fff;
  border-radius: 5px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
 }
 .service-img {
     height: auto;
