@@ -1,5 +1,5 @@
 import React from 'react';
-import FirebaseIntialize from '../../Firebase/Firebace.init';
+import FirebaseIntialize from '../Firebase/Firebace.init';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from 'react';
 import { useState } from 'react';

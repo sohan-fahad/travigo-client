@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import useAuthentication from '../components/Hooks/useAuthentication';
+import useAuthentication from '../../src/Hooks/useAuthentication';
 
 export const AuthContext = createContext()
 

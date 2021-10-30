@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import './Header.css'
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../images/logo-WHITE.png"
-import useAuth from "../../Hooks/useAuth";
+import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
     const { setUser, user } = useAuth()

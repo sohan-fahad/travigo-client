@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Redirect, useHistory, useParams } from 'react-router';
-import useAuth from '../Hooks/useAuth'
+import useAuth from '../../Hooks/useAuth'
 import './PlaceBooking.css'
 
 const PlaceOrder = () => {

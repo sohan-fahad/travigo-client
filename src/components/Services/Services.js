@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Spinner } from 'react-bootstrap';
 import Service from '../Service/Service';
 import './Services.css'
-import useAuth from '../Hooks/useAuth'
+import useAuth from '../../Hooks/useAuth'
 
 const Services = () => {
     const { preLoader, setPreLoader } = useAuth()

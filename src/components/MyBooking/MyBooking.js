@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
-import useAuth from '../Hooks/useAuth';
+import useAuth from '../../Hooks/useAuth';
 import './MyBooking.css'
 
 const MyBooking = () => {
