@@ -32,7 +32,7 @@ const AddNewService = () => {
             })
     }
     return (
-        <div className="AddService" id="addservice">
+        <div className="AddService" id="addpackages">
             <div className="addService-Container">
                 <form onSubmit={handleEventAdd}>
                     <input type="text" placeholder="Place Name" ref={nameRef} required />

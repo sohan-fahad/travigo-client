@@ -18,7 +18,7 @@ const Header = () => {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                    <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
+                    <Nav.Link as={HashLink} to="/home#packages">Packages</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#about">About</Nav.Link>
                     <Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link>
                     {
@@ -30,7 +30,7 @@ const Header = () => {
                             <Dropdown.Menu>
                                 <Dropdown.Item as={HashLink} to="/mybooking#mybooking" className="text-dark text-center">My Booking</Dropdown.Item>
                                 <Dropdown.Item as={HashLink} to="/manage#manage" className="text-dark text-center">Manage Booking</Dropdown.Item>
-                                <Dropdown.Item as={HashLink} to="/addservice#addservice" className="text-dark text-center">Add Service</Dropdown.Item>
+                                <Dropdown.Item as={HashLink} to="/addpackages#addpackages" className="text-dark text-center">Add Service</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     }

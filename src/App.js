@@ -26,7 +26,7 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/addservice">
+            <PrivateRoute path="/addpackages">
               <AddNewService></AddNewService>
             </PrivateRoute>
             <PrivateRoute path="/placebooking/:id">

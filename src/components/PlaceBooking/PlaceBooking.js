@@ -46,7 +46,7 @@ const PlaceOrder = () => {
             .then(res => {
                 if(res) {
                     alert("Booking Succesfull")
-                    history.push("/home")
+                    history.push("/mybooking")
                 }
             })
     }
