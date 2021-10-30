@@ -1,7 +1,20 @@
-# Getting Started with Create React App
+# TRAVIGO Travels
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Visit our websit](https://travigo-travel.web.app/).
 
-## Available Scripts
+## ABOUT TRAVIGO
+Travigo is a travel agency who offer you the best package for the exlporing the world. You can place a  booking throuth our website.
+
+## Why Choose Us?
+* We are realiabel.
+* We are very effortable.
+* We Offer the best price.
+* We Offer the best tour package.
+* You can place a custom booking.
+
+# BECOME AN EXPLORER TO GET THE STARTED
+Discover The Places & Experience The Beautiful Journey.
+
+
 
 

@@ -8,7 +8,7 @@ const HeroBox = () => {
             <Container>
                 <h1>BECOME AN EXPLORER</h1>
                 <h1>TO GET THE STARTED</h1>
-                <h5>Discover The Places & Experience The Beautiful Journy</h5>
+                <h5>Discover The Places & Experience The Beautiful Journey</h5>
             </Container>
         </div>
     );
