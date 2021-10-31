@@ -56,7 +56,10 @@ const Manage = () => {
                                 <td>{booking?.bookingDate}</td>
                                 <td>{booking?.email}</td>
                                 <td>{booking?.destinetion}</td>
-                                <td><button onClick={() => handlePainding(booking?._id)} className="btn-primary">{booking.status === "Pending" ? "PENDING" : "APPROVED"}</button></td>
+                                <td><button onClick={() => {
+                                    handlePainding(booking?._id)
+                                }
+                                } className="btn-primary">{booking.status === "Pending" ? "PENDING" : "APPROVED"}</button></td>
                                 <td><button className='btn-danger px-2 py-1'
                                     onClick={() => handleManageDelete(booking._id)}
                                 >X</button></td>

@@ -66,13 +66,13 @@ const PlaceOrder = () => {
                     </div>
                     <div className="booking-form">
                         <form onSubmit={hadleBooking}>
-                            <input type="email" value={user?.email} ref={emailRef} disabled />
+                            <input type="email" value={user?.email} ref={emailRef}  />
                             <input type="text" placeholder="Name" defaultValue={user?.displayName} ref={nameRef} />
-                            <input type="text" value={service?.name} ref={desitinetionRef} disabled />
+                            <input type="text" value={service?.name} ref={desitinetionRef} />
                             <input type="text" ref={addressRef} placeholder="Your Address" />
                             <input type="text" placeholder="Phone Number" ref={phoneRef} required />
                             <input type="date" ref={dateRef} required />
-                            <input type="number" value={service?.price} ref={priceRef} disabled />
+                            <input type="number" value={service?.price} ref={priceRef}  />
                             <input type="submit" value="Place Booking" />
                         </form>
                     </div>
