@@ -25,9 +25,9 @@ const Manage = () => {
             })
     }
     const handlePainding = id => {
-        bookings.status = "APPROVED"
-        console.log(bookings.status)
-        axios.put(`https://morning-reaches-74730.herokuapp.com/booking/${id}`, bookings.status)
+        let data = bookings.find(booking => booking._id === id)
+        data.status = "Approved"
+        axios.put(`https://morning-reaches-74730.herokuapp.com/booking/${id}`, data)
             .then(res => {
                 if (res) {
                     alert("APPROVED")
