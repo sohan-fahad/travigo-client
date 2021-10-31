@@ -6,7 +6,7 @@ const About = () => {
     return (
         <>
             <Container id="contact">
-                <h1 className="text-center contact-title">CONTACT US</h1>
+                <h1 className="text-center contact-title text-bright-red">CONTACT US</h1>
                 <div className="contact-container">
                     <div className="form-container">
                         <form>
