@@ -5,7 +5,7 @@
  display: flex;
  flex-direction: column;
  justify-content: space-between;
- border: 0.66px solid #7575755e;
+ border: 0.66px solid #ff5da362;
 }
 .service-img {
     height: auto;
@@ -30,16 +30,18 @@
 .btn-book {
     width: 100%;
     border: none;
-    background-color: #FF5DA2;
-    color: #fff;
+    border: 1px solid #FF5DA2;
+    background-color: #fff;
+    color: #FF5DA2;
     padding: 10px 0;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
     font-size: 16px;
     letter-spacing: 0.8px;
     font-weight: 600;
-    transition: 0.1s ease-in;
+    transition: 0.2s ease-in;
 }
 .btn-book:hover {
-    background-color: #b82565;
+    background-color: #FF5DA2;
+    color: #fff;
 }
