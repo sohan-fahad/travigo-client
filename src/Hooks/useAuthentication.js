@@ -1,6 +1,6 @@
 import React from 'react';
 import FirebaseIntialize from '../Firebase/Firebace.init';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -18,6 +18,14 @@ const useAuthentication = () => {
     const singingUsingGoole = () => {
         const googleProvider = new GoogleAuthProvider()
         return signInWithPopup(auth, googleProvider)
+    }
+
+    const logOut = () => {
+        signOut(auth)
+            .then(() => setUser({}))
+            .catch(err => {
+                setError(err)
+            })
     }
 
     // observ user state
@@ -43,7 +51,8 @@ const useAuthentication = () => {
         user,
         setUser,
         preLoader,
-        setPreLoader
+        setPreLoader,
+        logOut
     }
 };
 

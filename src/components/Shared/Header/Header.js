@@ -8,7 +8,7 @@ import logo from "../../../images/logo-WHITE.png"
 import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
-    const { setUser, user } = useAuth()
+    const { setUser, user, logOut } = useAuth()
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top" className="navBar">
             <Container>
@@ -39,8 +39,8 @@ const Header = () => {
                     {user?.email && <Nav.Link as={Link} to="/addservice">Add Service</Nav.Link>}
                     {user?.email&& <Nav.Link as={Link} to="/manage">Manage Booking</Nav.Link>} */}
                     {
-                        user?.displayName ? <Nav.Link as={HashLink} className="btn-light text-dark me-2" to="/login#login"
-                            onClick={() => setUser({})}>Log Out</Nav.Link> :
+                        user?.displayName ? <Nav.Link as={HashLink} className="btn-light text-dark me-2" to="/login"
+                            onClick={logOut}>Log Out</Nav.Link> :
                             <Nav.Link as={Link} className="btn-light text-dark me-2" to="/login">Login</Nav.Link>
                     }
                     <Navbar.Text>
