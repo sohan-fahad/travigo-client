@@ -38,4 +38,8 @@
     font-size: 16px;
     letter-spacing: 0.8px;
     font-weight: 600;
+    transition: 0.1s ease-in;
+}
+.btn-book:hover {
+    background-color: #b82565;
 }
